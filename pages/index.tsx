@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Button } from '../components/Globals/Button';
 import { Input } from '../components/Globals/Input';
 import {
@@ -17,6 +18,8 @@ import {
 } from '../styles/pages/Login/styles';
 
 export default function Home() {
+    const { push } = useRouter();
+
     return (
         <Container>
             <FormSide>
@@ -43,7 +46,10 @@ export default function Home() {
                     </RememberMe>
                     <ButtonBox>
                         <Link href="/">Esqueci minha senha</Link>
-                        <Button type="submit">Entrar</Button>
+                        {/* O type do Button abaixo foi necessário para que, neste caso, pudessemos avançar com o projeto simples */}
+                        <Button onClick={() => push('/Home')} type="button">
+                            Entrar
+                        </Button>
                     </ButtonBox>
                 </Form>
                 <FormFooter>
