@@ -5,6 +5,10 @@ export const Container = styled.div`
     width: 100vw;
 
     display: flex;
+
+    background-color: #fff;
+
+    overflow: hidden;
 `;
 
 export const FormSide = styled.div`
