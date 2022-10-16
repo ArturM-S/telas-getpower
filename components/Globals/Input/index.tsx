@@ -2,7 +2,7 @@ import { InputHTMLAttributes } from 'react';
 import { Container, InputField, Label } from './styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-    label: string;
+    label?: string;
     type: string;
 }
 export function Input({ label, type, ...rest }: InputProps) {
