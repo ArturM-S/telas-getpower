@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import {
     AccessButton,
     CardHead,
@@ -16,6 +17,7 @@ interface IProductCardProps {
     price: number;
     image: string;
     description: string;
+    accessLink?: string;
 }
 
 export function ProductCard({
@@ -24,7 +26,10 @@ export function ProductCard({
     price,
     image,
     description,
+    accessLink,
 }: IProductCardProps) {
+    const { push } = useRouter();
+
     return (
         <Container>
             <CardHead>
@@ -36,7 +41,9 @@ export function ProductCard({
                 <ProductDescription>{description}</ProductDescription>
             </ProductInfo>
             <ProductImage src={image} alt={name} />
-            <AccessButton>Acessar</AccessButton>
+            <AccessButton onClick={() => push(`${accessLink}`)}>
+                Acessar
+            </AccessButton>
         </Container>
     );
 }

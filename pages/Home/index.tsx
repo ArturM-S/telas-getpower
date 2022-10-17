@@ -55,6 +55,7 @@ export default function Home() {
             image: 'image',
             description:
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc vel tincidunt luctus, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet lorem. Sed euismod, nunc vel tincidunt luctus, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet lorem.',
+            accessLink: '/Proposal',
         },
     ]);
 
@@ -104,6 +105,7 @@ export default function Home() {
                               price={product.price}
                               image={product.image}
                               description={product.description}
+                              accessLink={product.accessLink}
                           />
                       ))
                     : products.map(product => (
@@ -114,6 +116,7 @@ export default function Home() {
                               price={product.price}
                               image={product.image}
                               description={product.description}
+                              accessLink={product.accessLink}
                           />
                       ))}
             </ProductsBox>

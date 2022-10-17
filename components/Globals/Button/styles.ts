@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
 
 interface IContainerProps {
-    isLoading?: boolean;
+    width?: string;
 }
 
 export const Container = styled.button<IContainerProps>`
@@ -16,7 +15,6 @@ export const Container = styled.button<IContainerProps>`
     border-radius: 5px;
 
     height: 40px;
-    width: 80px;
 
     padding: 8px 16px;
 
@@ -30,12 +28,4 @@ export const Container = styled.button<IContainerProps>`
     :hover {
         background-color: #fbbf77;
     }
-
-    ${props =>
-        props.isLoading &&
-        css`
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        `}
 `;
