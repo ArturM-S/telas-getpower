@@ -15,9 +15,7 @@ export const Main = styled.main`
 `;
 
 export const Content = styled.div`
-    max-height: 100%;
     width: 100%;
-    min-height: 100vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
