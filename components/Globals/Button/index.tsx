@@ -3,13 +3,8 @@ import { Container } from './styles';
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
-    isLoading?: boolean;
 }
 
-export function Button({ children, isLoading, ...rest }: IButtonProps) {
-    return (
-        <Container isLoading={isLoading} {...rest}>
-            {children}
-        </Container>
-    );
+export function Button({ children, ...rest }: IButtonProps) {
+    return <Container {...rest}>{children}</Container>;
 }

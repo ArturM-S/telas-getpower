@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { media } from '../styles/globals';
 
 export const Container = styled.section`
     max-height: 100vh;
@@ -15,6 +16,9 @@ export const Main = styled.main`
 `;
 
 export const Content = styled.div`
+    ${media.mobile} {
+        width: 100vw;
+    }
     width: 100%;
     height: 100vh;
     display: flex;

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { media } from '../../globals';
 
 export const Sort = styled.select`
     width: 70px;
@@ -15,6 +16,10 @@ export const Sort = styled.select`
 export const ProductsBox = styled.div`
     max-height: 30%;
     display: flex;
+    ${media.mobile} {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;

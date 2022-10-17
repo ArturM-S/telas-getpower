@@ -1,10 +1,14 @@
 import styled from '@emotion/styled';
+import { media } from '../../styles/globals';
 
 interface ITagProps {
     type: string;
 }
 
 export const Container = styled.div`
+    ${media.mobile} {
+        min-width: 100%;
+    }
     width: 30%;
     max-width: 30%;
     display: flex;

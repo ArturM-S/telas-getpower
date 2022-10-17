@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { media } from '../../globals';
 
 export const Container = styled.div`
     height: 100vh;
@@ -14,6 +15,15 @@ export const Container = styled.div`
 export const FormSide = styled.div`
     height: 100%;
     width: 50%;
+    ${media.mobile} {
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        gap: 0.5rem;
+    }
+    ${media.laptop} {
+        padding-left: 15%;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +34,9 @@ export const FormSide = styled.div`
 `;
 
 export const ImageSide = styled.div`
+    ${media.mobile} {
+        display: none;
+    }
     height: 100%;
     width: 50%;
 
@@ -82,6 +95,9 @@ export const FormFooter = styled.div`
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    ${media.mobile} {
+        align-self: center;
+    }
 `;
 
 export const Meanings = styled.div`
