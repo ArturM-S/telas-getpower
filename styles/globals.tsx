@@ -1,5 +1,11 @@
 import { css, Global } from '@emotion/react';
 
+export const media = {
+    mobile: '@media(max-width:768px)',
+    tablet: '@media(min-width:768px)',
+    laptop: '@media(min-width: 1024px)',
+    desktop: '@media(min-width: 1400px)',
+};
 export const globalStyles = (
     <Global
         styles={css`
@@ -8,6 +14,16 @@ export const globalStyles = (
                 padding: 0;
                 outline: 0;
                 box-sizing: border-box;
+            }
+            @media (max-width: 1080px) {
+                html {
+                    font-size: 93.75%;
+                }
+            }
+            @media (max-width: 720px) {
+                html {
+                    font-size: 87.5%;
+                }
             }
             html,
             body {

@@ -1,6 +1,32 @@
 import styled from '@emotion/styled';
+import { media } from '../../styles/globals';
 
-export const Container = styled.div`
+interface ContainerProps {
+    isSidebarOpen: boolean;
+}
+
+export const MenuIcon = styled.button`
+    visibility: hidden;
+    ${media.mobile} {
+        height: 20px;
+        width: 45px;
+        visibility: visible;
+        position: absolute;
+        top: 30px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #000;
+    }
+    border: none;
+    color: #fff;
+`;
+export const Container = styled.div<ContainerProps>`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -9,6 +35,10 @@ export const Container = styled.div`
     background-color: #01010d;
     color: #f1f1f1;
     padding: 1rem;
+    ${media.mobile} {
+        position: absolute;
+        display: ${({ isSidebarOpen }) => (isSidebarOpen ? 'flex' : 'none')};
+    }
 `;
 
 export const NavLogoBox = styled.div`

@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
+import { media } from '../../styles/globals';
 
 export const Container = styled.div`
+    ${media.mobile} {
+        min-width: 100vw;
+        min-height: 35px;
+    }
     height: 24px;
     width: 100%;
     display: flex;

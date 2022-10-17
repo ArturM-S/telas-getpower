@@ -92,8 +92,7 @@ export default function Proposal() {
                 style={{
                     fontSize: '0.6rem',
                     backgroundColor: 'green',
-                    width: '11%',
-                    height: '1.5rem',
+
                     display: 'flex',
                     alignSelf: 'flex-end',
                 }}
@@ -107,8 +106,7 @@ export default function Proposal() {
                     style={{
                         fontSize: '0.6rem',
                         backgroundColor: 'orange',
-                        width: '11%',
-                        height: '1.5rem',
+
                         display: 'flex',
                         alignSelf: 'flex-end',
                     }}

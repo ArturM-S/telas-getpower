@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { media } from '../../globals';
 
 export const Topic = styled.h1`
     display: flex;
@@ -19,11 +20,12 @@ export const SIgnal = styled.div`
 `;
 
 export const StepsToolTip = styled.div`
-    width: 100%;
-    height: 10%;
+    ${media.mobile} {
+        flex-wrap: wrap;
+    }
 
     display: flex;
-    padding: 0 20px;
+    padding: 1rem;
     align-items: center;
     gap: 1rem;
 

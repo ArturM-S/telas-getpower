@@ -6,7 +6,6 @@ import { Container, ProfileMenu } from './styles';
 export function Header() {
     return (
         <Container>
-            <GiHamburgerMenu size={20} />
             <ProfileMenu>
                 <MdOutlineEmail size={20} />
                 <MdNotificationsNone size={20} />
